@@ -78,9 +78,9 @@ point_breakdown = [
     (1, ["channel_test_initialization"]),           #test number 0
     (1, ["sanitize_test_initialization"]),          #test number 1
     (1, ["valgrind_test_initialization"]),          #test number 2
-    (1, ["channel_test_free"]),                     #test number 3
-    (1, ["sanitize_test_free"]),                    #test number 4
-    (1, ["valgrind_test_free"]),                    #test number 5
+    (1, ["channel_test_Free"]),                     #test number 3
+    (1, ["sanitize_test_Free"]),                    #test number 4
+    (1, ["valgrind_test_Free"]),                    #test number 5
     (3, ["channel_test_send_correctness"]),         #test number 6
     (3, ["sanitize_test_send_correctness"]),        #test number 7
     (3, ["valgrind_test_send_correctness"]),        #test number 8
@@ -169,8 +169,8 @@ def check_global_variables():
     return True
 
 def grade():
-    result = {}
     if len(sys.argv) == 2:
+        result = {}
         test_num = int(sys.argv[1])
         # Run make on the assignment
         if make_assignment() and check_global_variables():
@@ -223,6 +223,7 @@ def grade():
             total_possible += points
         return (score, total_possible)
     else:
+        result = {}
         # Run make on the assignment
         if make_assignment() and check_global_variables():
             # Run test cases

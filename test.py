@@ -74,44 +74,44 @@ add_test_case_valgrind("test_correctness", iters_one,timeout_valgrind * 50)
 
 # Score distribution
 point_breakdown = [
-    # Basic (162 pts)
-    (3, ["channel_test_initialization"]),           #test number 0
-    (3, ["sanitize_test_initialization"]),          #test number 1
-    (3, ["valgrind_test_initialization"]),          #test number 2
-    (3, ["channel_test_free"]),                     #test number 3
-    (3, ["sanitize_test_free"]),                    #test number 4
-    (3, ["valgrind_test_free"]),                    #test number 5
+    
+    (1, ["channel_test_initialization"]),           #test number 0
+    (1, ["sanitize_test_initialization"]),          #test number 1
+    (1, ["valgrind_test_initialization"]),          #test number 2
+    (1, ["channel_test_free"]),                     #test number 3
+    (1, ["sanitize_test_free"]),                    #test number 4
+    (1, ["valgrind_test_free"]),                    #test number 5
     (3, ["channel_test_send_correctness"]),         #test number 6
     (3, ["sanitize_test_send_correctness"]),        #test number 7
     (3, ["valgrind_test_send_correctness"]),        #test number 8
     (3, ["channel_test_receive_correctness"]),      #test number 9
     (3, ["sanitize_test_receive_correctness"]),     #test number 10
     (3, ["valgrind_test_receive_correctness"]),     #test number 11
-    (6, ["channel_test_overall_send_receive"]),     #test number 12
-    (6, ["sanitize_test_overall_send_receive"]),    #test number 13
-    (6, ["valgrind_test_overall_send_receive"]),    #test number 14
+    (3, ["channel_test_overall_send_receive"]),     #test number 12
+    (4, ["sanitize_test_overall_send_receive"]),    #test number 13
+    (4, ["valgrind_test_overall_send_receive"]),    #test number 14
     (3, ["channel_test_cpu_utilization_send"]),     #test number 15
-    (3, ["sanitize_test_cpu_utilization_send"]),    #test number 16
-    (3, ["valgrind_test_cpu_utilization_send"]),    #test number 17
+    (4, ["sanitize_test_cpu_utilization_send"]),    #test number 16
+    (4, ["valgrind_test_cpu_utilization_send"]),    #test number 17
     (3, ["channel_test_cpu_utilization_receive"]),  #test number 18
-    (3, ["sanitize_test_cpu_utilization_receive"]), #test number 19
-    (3, ["valgrind_test_cpu_utilization_receive"]), #test number 20
+    (4, ["sanitize_test_cpu_utilization_receive"]), #test number 19
+    (4, ["valgrind_test_cpu_utilization_receive"]), #test number 20
 
-    # Close (36 pts)
-    (6, ["channel_test_channel_close_with_send"]),  #test number 21
-    (6, ["sanitize_test_channel_close_with_send"]), #test number 22
-    (6, ["valgrind_test_channel_close_with_send"]), #test number 23
-    (6, ["channel_test_channel_close_with_receive"]),#test number 24
-    (6, ["sanitize_test_channel_close_with_receive"]),#test number 25
-    (6, ["valgrind_test_channel_close_with_receive"]),#test number 26
+    
+    (4, ["channel_test_channel_close_with_send"]),  #test number 21
+    (4, ["sanitize_test_channel_close_with_send"]), #test number 22
+    (4, ["valgrind_test_channel_close_with_send"]), #test number 23
+    (4, ["channel_test_channel_close_with_receive"]),#test number 24
+    (4, ["sanitize_test_channel_close_with_receive"]),#test number 25
+    (4, ["valgrind_test_channel_close_with_receive"]),#test number 26
 
     
     (1, ["channel_serialize"]),                  #test number 27
     (1, ["sanitize_serialize"]),                 #test number 28
     (1, ["valgrind_serialize"]),                 #test number 29
-    (6, ["channel_test_correctness"]),              #test number 30
+    (5, ["channel_test_correctness"]),              #test number 30
     (6, ["sanitize_test_correctness"]),             #test number 31
-    (6, ["valgrind_test_correctness"]),             #test number 32
+    (5, ["valgrind_test_correctness"]),             #test number 32
     
 ]
 
